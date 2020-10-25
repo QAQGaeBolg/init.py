@@ -14,9 +14,21 @@ SUSTech_CS103_2020F
     - 组织语言
         
 #### 3.database
-- A：
+- A
     - 训练集
-- B：
+- B
     - 语义
     - 短语
     - memory `optional`
+    
+---
+语音部分
+- ASR (语音识别)
+- TTS (语音合成)
+
+NLP  
+**NLU (语言理解)**
+- DST (对话状态管理)
+- Policy (动作候选排序)
+
+NLG (语言生成)
