@@ -32,3 +32,6 @@ NLP
 - Policy (动作候选排序)
 
 NLG (语言生成)
+
+## Test Bench 的用法
+下载`init.py`, `kernel.py` 和 `static` 文件夹，置于同一文件夹下，安装`flask`，更改`kernel.py` 中的TODO部分，然后运行`init.py`。它应当运行在`localhost:8080/`上
