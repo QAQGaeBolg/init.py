@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test</title>
+</head>
+<style>
+    .block {
+        background: ghostwhite;
+        padding: 10px;
+        margin: 0 auto;
+        border-radius: 5px;
+        font-family: "Droid Sans Mono";
+        font-size: 20px;
+        width: 60%;
+        left: 20%;
+        box-shadow: 10px 10px 10px darkgrey;
+    }
+
+</style>
+<body>
+<h1>Test</h1>
+<script>
+    function run() {
+        let xmlHttp = new XMLHttpRequest()
+        let str = document.getElementById("input_text").value, val = ""
+        xmlHttp.open("post", "/test/api/dialog_analyze", true)
+        xmlHttp.send(str)
+        xmlHttp.onreadystatechange = function () {
+            if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+                val = xmlHttp.responseText
+                document.getElementById("main").innerHTML += "<div class='block'><p>User:"
+                    + str + "</p><p>AI:"
+                    + val + "</p></div><br>"
+            }
+
+        }
+
+        return false
+    }
+</script>
+</body>
+<div id="input" class="block" style="position: fixed;left: 10%;top:80%;width: 80%">
+    <label>What you want to tell
+        <input type="text" id="input_text" name="input_text" style="width: 70%">
+        <input type="submit" onclick="run()" value="Submit" style="width: 10%;height: 50px">
+    </label>
+</div>
+<div id="main">
+</div>
+
+</html>
