@@ -23,6 +23,7 @@
 <script>
     function run() {
         let xmlHttp = new XMLHttpRequest()
+        document.charset = "utf-8"        
         let str = document.getElementById("input_text").value, val = ""
         xmlHttp.open("post", "/test/api/dialog_analyze", true)
         xmlHttp.send(str)
